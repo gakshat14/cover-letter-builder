@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --main-color: #212529;
+    font-size: 1.2em;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    display: inline-flex;
+    width: 100%;
+}
+
+main#render_main {
+    line-height: 1.1rem;
+    text-align: justify;
+    font-size: 0.8rem;
+    padding: 5px 20px 20px 20px;
+    margin-top: 5px;
+}
+
+label {
+    display: block;
+}
+
+#root_main {
+    flex: 3;
+}
+
+#root_aside {
+    flex: 1;
+    height: 100vh;
+    overflow-x: auto;
+}
+
+pre {
+    font-family: "Lato", sans-serif;
+}
+
+#render_main p {
+    margin-top: 10px;
+}
+
+#render_main p:nth-last-child(1) {
+    margin-bottom: 10px;
+}
+
+
+@media print {
+    aside {
+        display: none;
+    }
+    body {
+        display: block;
+    }
+}
+
