@@ -1,0 +1,49 @@
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+header h2 {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+address {
+    font-weight: 300;
+    font-size: 0.9rem;
+    font-style: normal;
+    color: #595554;
+    margin-top: 2px;
+}
+
+header ul {
+    margin-top: 20px;
+}
+
+.links {
+    padding: unset;
+    font-size: 0.8em;
+}
+
+.links li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.links li:nth-child(1) {
+    margin-left: 0;
+}
+
+.links li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+header h1 > span {
+    font-weight: 100;
+}
