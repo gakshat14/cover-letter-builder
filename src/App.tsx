@@ -4,6 +4,7 @@ import { GlobalStateContext } from './GlobalState/StateContext';
 import { RenderedView } from './RenderedCover/RenderedView';
 
 export function App() {
+
     return(
         <GlobalStateContext>
             <main id="root_main"><RenderedView /></main>

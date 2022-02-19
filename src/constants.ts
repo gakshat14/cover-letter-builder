@@ -28,7 +28,7 @@ export interface IGlobalState {
     company_message: string;
 }
 
-export enum Actions{
+export enum Actions {
     CHANGE_COMPANY_NAME = 'CHANGE_COMPANY_NAME',
     CHANGE_COMPANY_ADDRESS = 'CHANGE_COMPANY_ADDRESS',
     CHANGE_COMPANY_PERSON = 'CHANGE_COMPANY_PERSON',
@@ -53,4 +53,28 @@ export enum linkTypes {
     mobile = 'mobile',
     linkedin = 'linkedin',
     datacamp = 'datacamp'
+}
+
+export const enum editorIds {
+    hiring_name = "hiring_name",
+    company_name = "company_name",
+    company_address = "company_address",
+    job_portal = "job_portal",
+    position = "position",
+    para1 = "para1",
+    para2 = "para2",
+    para3 = "para3",
+    para4 = "para4",
+    para5 = "para5",
+    company_message = "company_message",
+    name = 'name',
+
+}
+
+export function saveToLocalStorage<T>(key: string, data: T) {
+    window.localStorage.setItem(key, data.toString());
+}
+
+export function retrieveFromLocalStorage<T>(key: string): string {
+    return window.localStorage.getItem(editorIds.company_address)
 }

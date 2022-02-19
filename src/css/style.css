@@ -38,6 +38,7 @@ label {
 
 pre {
     font-family: "Lato", sans-serif;
+    white-space: pre-wrap;
 }
 
 #render_main p {
