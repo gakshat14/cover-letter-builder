@@ -71,10 +71,20 @@ export const enum editorIds {
 
 }
 
-export function saveToLocalStorage<T>(key: string, data: T) {
-    window.localStorage.setItem(key, data.toString());
+/**
+ * A function to store data in the local storage for a given key
+ * @param {string} key this will be used to store the data in the local storage
+ * @param {T} data genric data but will be stored as a string 
+ */
+export function saveToLocalStorage(key: string, data: string) {
+    window.localStorage.setItem(key, data);
 }
 
-export function retrieveFromLocalStorage<T>(key: string): string {
+/**
+ * A function to retrieve the data for the key passed
+ * @param {string} key this will be used to retrieve data from the local storage 
+ * @returns {string} data for the key passed
+ */
+export function retrieveFromLocalStorage(key: string): string {
     return window.localStorage.getItem(editorIds.company_address)
 }

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Actions, editorIds } from "../constants";
+import { Actions, editorIds, saveToLocalStorage } from "../constants";
 import { StateContext } from "../GlobalState/StateContext";
 
 export function Editor() {
@@ -30,56 +30,56 @@ export function Editor() {
           type: Actions.CHANGE_JOB_PORTAL,
           payload: { job_portal: e.target.value },
         });
-        window.localStorage.setItem(editorIds.job_portal, e.target.value);
+        saveToLocalStorage(editorIds.job_portal, e.target.value);
         break;
       case editorIds.position:
         dispatch({
           type: Actions.CHANGE_POSITION,
           payload: { position: e.target.value },
         });
-        window.localStorage.setItem(editorIds.position, e.target.value);
+        saveToLocalStorage(editorIds.position, e.target.value)
         break;
       case editorIds.para1:
         dispatch({
           type: Actions.CHANGE_PARA1,
           payload: { para1: e.target.value },
         });
-        window.localStorage.setItem(editorIds.para1, e.target.value);
+        saveToLocalStorage(editorIds.para1, e.target.value)
         break;
       case editorIds.para2:
         dispatch({
           type: Actions.CHANGE_PARA2,
           payload: { para2: e.target.value },
         });
-        window.localStorage.setItem(editorIds.para2, e.target.value);
+        saveToLocalStorage(editorIds.para2, e.target.value);
         break;
       case editorIds.para3:
         dispatch({
           type: Actions.CHANGE_PARA3,
           payload: { para3: e.target.value },
         });
-        window.localStorage.setItem(editorIds.para3, e.target.value);
+        saveToLocalStorage(editorIds.para3, e.target.value);
         break;
       case editorIds.para4:
         dispatch({
           type: Actions.CHANGE_PARA4,
           payload: { para4: e.target.value },
         });
-        window.localStorage.setItem(editorIds.para4, e.target.value);
+        saveToLocalStorage(editorIds.para4, e.target.value);
         break;
       case editorIds.para5:
         dispatch({
           type: Actions.CHANGE_PARA5,
           payload: { para5: e.target.value },
         });
-        window.localStorage.setItem(editorIds.para5, e.target.value);
+        saveToLocalStorage(editorIds.para5, e.target.value);
         break;
       case editorIds.company_message:
         dispatch({
           type: Actions.CHANGE_COMPANY_MESSAGE,
           payload: { company_message: e.target.value },
         });
-        window.localStorage.setItem(editorIds.company_message, e.target.value);
+        saveToLocalStorage(editorIds.company_message, e.target.value);
         break;
       default:
         break;
@@ -202,17 +202,6 @@ export function Editor() {
           value={state.para4}
           name="make_more_valid"
           id={editorIds.para4}
-          cols={30}
-          rows={10}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor={editorIds.para5}>Final Begging para</label>
-        <textarea
-          onChange={onFieldChange}
-          value={state.para5}
-          name="final_para"
-          id={editorIds.para5}
           cols={30}
           rows={10}
         />
