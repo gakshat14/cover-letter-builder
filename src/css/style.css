@@ -38,14 +38,19 @@ label {
 
 pre {
     font-family: "Lato", sans-serif;
+    white-space: pre-wrap;
 }
 
 #render_main p {
     margin-top: 10px;
 }
 
-#render_main p:nth-last-child(1) {
-    margin-bottom: 10px;
+#render_main pre {
+    margin-top: 10px;
+}
+
+footer {
+    margin-top: 10px;
 }
 
 

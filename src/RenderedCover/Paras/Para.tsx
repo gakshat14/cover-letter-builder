@@ -30,7 +30,7 @@ export function Para() {
         <>
             <p>{returnParaString(state.para1)}</p>
             <p>{returnParaString(state.para2)}</p>
-            <p>{returnParaString(state.para3)}</p>
+            <pre>{returnParaString(state.para3)}</pre>
             <p>{returnParaString(state.para4)}</p>
             <p>{returnParaString(state.para5)}</p>
         </>
