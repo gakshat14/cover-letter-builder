@@ -29,12 +29,25 @@ export function Header() {
         return designationString;
     }
 
+    if (window.location.search.includes('?local=true')) {
+        return (
+            <header>
+                <h1><span>{state.header.firstName}</span> {state.header.lastName}</h1>
+                <h2>{renderDesignation().toUpperCase()}</h2>
+                <address>{state.header.address}</address>
+                <ul className='links'>{state.header.links.map((link) => <HeaderLinks key={`header_link_${link.type}`} {...link} icon={link.icon ? link.icon : linksIcon[link.type]} />)}</ul>
+            </header>
+        )
+    }
+
     return (
         <header>
-            <h1><span>{state.header.firstName}</span> {state.header.lastName}</h1>
-            <h2>{renderDesignation().toUpperCase()}</h2>
-            <address>{state.header.address}</address>
-            <ul className='links'>{state.header.links.map((link) => <HeaderLinks key={`header_link_${link.type}`} {...link} icon={link.icon ? link.icon : linksIcon[link.type]} />)}</ul>
+            <p>{state.name}</p>
+            <p>{state.address_line_1}</p>
+            <p>{state.address_line_2}</p>
+            <p>{state.zipcode}</p>
+            <p>{state.email}</p>
+            <p>{state.contactNumber}</p>
         </header>
-    )
+    );
 }

@@ -26,6 +26,12 @@ export interface IGlobalState {
     para4: string;
     para5: string;
     company_message: string;
+    name: string;
+    contactNumber: string;
+    address_line_1: string;
+    address_line_2: string;
+    zipcode: number;
+    email: string;
 }
 
 export enum Actions {
@@ -68,7 +74,9 @@ export const enum editorIds {
     para5 = "para5",
     company_message = "company_message",
     name = 'name',
-
+    email = 'email',
+    contactNumber = 'contactNumber',
+    addressLine1 = 'Address'
 }
 
 /**
