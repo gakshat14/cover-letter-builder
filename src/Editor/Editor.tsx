@@ -89,6 +89,60 @@ export function Editor() {
   return (
     <form action="">
       <div className="form-group">
+        <label htmlFor={editorIds.hiring_name}>Your name</label>
+        <input
+          onChange={onFieldChange}
+          value={state.companyPerson}
+          type="text"
+          id={editorIds.hiring_name}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor={editorIds.hiring_name}>Address 1</label>
+        <input
+          onChange={onFieldChange}
+          value={state.companyPerson}
+          type="text"
+          id={editorIds.hiring_name}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor={editorIds.hiring_name}>Address 2</label>
+        <input
+          onChange={onFieldChange}
+          value={state.companyPerson}
+          type="text"
+          id={editorIds.hiring_name}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor={editorIds.hiring_name}>Zipcode</label>
+        <input
+          onChange={onFieldChange}
+          value={state.companyPerson}
+          type="number"
+          id={editorIds.hiring_name}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor={editorIds.hiring_name}>Email</label>
+        <input
+          onChange={onFieldChange}
+          value={state.companyPerson}
+          type="email"
+          id={editorIds.hiring_name}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor={editorIds.hiring_name}>Contact</label>
+        <input
+          onChange={onFieldChange}
+          value={state.companyPerson}
+          type="tel"
+          id={editorIds.hiring_name}
+        />
+      </div>
+      <div className="form-group">
         <label htmlFor={editorIds.hiring_name}>Hiring person</label>
         <input
           onChange={onFieldChange}

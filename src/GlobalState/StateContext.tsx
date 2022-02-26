@@ -35,8 +35,6 @@ const initialLinks = [
     },
 ];
 
-console.log(editorIds.company_name);
-
 const initialState: IGlobalState = {
     header: {
         firstName: "Akshat",
@@ -56,6 +54,12 @@ const initialState: IGlobalState = {
     job_portal: "",
     position: "",
     company_message: "",
+    name: '',
+    address_line_1: '',
+    address_line_2: '',
+    zipcode: null,
+    contactNumber: '',
+    email: ''
 };
 
 interface IProps {
